@@ -2,10 +2,8 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro de Funcionários</title>
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
-
 </head>
 <body>
     <h1>Cadastro de Funcionários</h1>
@@ -13,50 +11,41 @@
     <form method="POST" action="/adicionar_funcionario">
         <label for="nome">Nome:</label>
         <input type="text" name="nome" required><br>
-        <label for="nome">Sobrenome:</label>
+        <label for="sobrenome">Sobrenome:</label>
         <input type="text" name="sobrenome"><br>
-        <label for="setor">Setor:</label>
-        <input type="text" name="nome" required><br>
         <label for="cargo">Cargo:</label>
-        <input type="text" name="nome" required><br>
-        <label for="ata_de_admissão">Data de admissão:</label>
-        <input type="date" name="data_de_admissão"><br>
-        <label for="status_funcionário">Status funcionário:</label>
-        <input type="checkbox" name="status_funcionário" value="true"><br>
-        <label for="cargo_id">Cargo id:</label>
-        <input type="number" name="cargo_id"><br>
-        <label for="setor_id">Setor id:</label>
-        <input type="number" name="setor_id"><br>
-
-
+        <input type="text" name="cargo" required><br>
+        <label for="setor">Setor:</label>
+        <input type="text" name="setor" required><br>
+        <label for="data_de_admissao">Data de admissão:</label>
+        <input type="date" name="data_de_admissao"><br>
+        <label for="status_funcionario">Status funcionário:</label>
+        <input type="checkbox" name="status_funcionario" value="1"><br>
 
         <button type="submit">Adicionar Funcionário</button>
     </form>
 
     <table>
-      <tr>
-        <th>ID</th>
-        <th>Nome</th>
-        <th>Sobrenome</th>
-        <th>Data de Admissão</th>
-        <th>Status Funcionário</th>
-        <th>Cargo</th>
-        <th>Setor</th>
-        <th>Status Cargo</th>
-        <th>Status Setor</th>
-        
-    </tr>
-    {% for funcionario in funcionarios %}
-    <tr>
-      <td>{{ funcionario[0] }}</td>
-      <td>{{ funcionario[1] }}</td>
-      <td>{{ funcionario[2] }}</td>
-      <td>{{ funcionario[3] }}</td>
-      <td>{{ funcionario[4] }}</td>
-      <td>{{ funcionario[5] }}</td>
-      <td>{{ funcionario[6] }}</td>
-      <td>{{ funcionario[7] }}</td>
-      <td>{{ funcionario[8] }}</td>
-    </tr>
-    {% endfor %}
-</table>
+        <tr>
+            <th>ID</th>
+            <th>Nome</th>
+            <th>Sobrenome</th>
+            <th>Data de Admissão</th>
+            <th>Status Funcionário</th>
+            <th>Cargo</th>
+            <th>Setor</th>
+        </tr>
+        {% for funcionario in funcionarios %}
+        <tr>
+            <td>{{ funcionario[0] }}</td>
+            <td>{{ funcionario[1] }}</td>
+            <td>{{ funcionario[2] }}</td>
+            <td>{{ funcionario[3] }}</td>
+            <td>{{ funcionario[4] }}</td>
+            <td>{{ funcionario[5] }}</td>
+            <td>{{ funcionario[6] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

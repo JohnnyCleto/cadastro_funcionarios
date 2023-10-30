@@ -1,58 +1,65 @@
 body {
-    font-family: Arial, sans-serif;
-    text-align: center;
-    margin: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f2f2f2;
+    margin: 0;
+    padding: 0;
 }
 
 h1 {
-    background-color: #333;
-    color: #fff;
-    padding: 10px;
+    text-align: center;
 }
 
 form {
-    margin: 20px;
+    width: 60%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
 }
 
-input {
-    padding: 5px;
-    margin: 5px;
+form label {
+    display: block;
+    margin-bottom: 5px;
 }
 
-button {
-    background-color: #333;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-}
-
-ul {
-    list-style-type: none;
-}
-
-li {
-    background-color: #f4f4f4;
+form input[type="text"],
+form input[type="date"],
+form input[type="number"],
+form input[type="checkbox"] {
+    width: 100%;
     padding: 10px;
-    margin: 5px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form button {
+    background-color: #007BFF;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: block;
+    margin: 10px 0;
 }
 
 table {
-    border: 1px solid black;
-    font:
-      16px "Open Sans",
-      Helvetica,
-      Arial,
-      sans-serif;
-  }
-  
-  thead > tr {
-    background-color: rgb(228, 240, 245);
-  }
-  
-  th,
-  td {
-    border: 1px solid black;
-    padding: 4px 6px;
-  }
-  
+    width: 80%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    border: 1px solid #ccc;
+}
+
+table th,
+table td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+}
+
+
+table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
